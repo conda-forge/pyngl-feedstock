@@ -14,7 +14,7 @@ source:
     - beta_version.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
