@@ -45,12 +45,14 @@ requirements:
     - zlib 1.2.*
 
 test:
+  source_files:
+    - src/examples
   requires:
     - nose
   imports:
     - Ngl
   commands:
-    - cd $SRC_DIR/src/examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
+    - cd src/examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
 
 about:
   home: http://pyngl.ucar.edu/
