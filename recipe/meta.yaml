@@ -29,8 +29,11 @@ requirements:
     - fontconfig 2.12.*
     - freetype 2.7|2.7.*
     - expat
-    - cairo 1.14.*  # [linux]
+    - cairo 1.14.*
     - zlib 1.2.*
+    - xorg-libx11
+    - xorg-libxext
+    - xorg-libxrender
   run:
     - ncl
     - libgcc
@@ -41,8 +44,11 @@ requirements:
     - fontconfig 2.12.*
     - freetype 2.7|2.7.*
     - expat
-    - cairo 1.14.*  # [linux]
+    - cairo 1.14.*
     - zlib 1.2.*
+    - xorg-libx11
+    - xorg-libxext
+    - xorg-libxrender
 
 test:
   source_files:
