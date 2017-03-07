@@ -20,5 +20,12 @@ if [ "$(uname)" = "Darwin" ]; then
     fi
 fi
      
+if [[ $(uname) == Darwin ]]; then
+  export MACOSX_DEPLOYMENT_TARGET="10.9"
+  export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
+  export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
+  export LDFLAGS="-headerpad_max_install_names $LDFLAGS"
+fi
+
 cd src
 python setup.py install
