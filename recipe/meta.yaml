@@ -1,6 +1,4 @@
-{% set ver = "1.5.0" %}
-{% set beta = "beta20161122" %}
-{% set version = ver + "_" + beta %}
+{% set version = "1.5.0" %}
 
 package:
   name: pyngl
@@ -9,12 +7,10 @@ package:
 source:
   fn: pyngl-{{ version }}.tar.gz
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
-  sha256: 5b13af17d819d210e92d179a73f1323bc0feeeafefe55ded043b74462ebf712d
-  patches:
-    - beta_version.patch
+  sha256: 14a5fc172d4eb166a675c190d1349e5ac46cbee32d0efcc2c0446d47bbce094b
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -23,26 +19,26 @@ requirements:
     - ncl
     - gcc
     - python
-    - numpy x.x
+    - numpy 1.7.*  # [py27]
     - libpng >=1.6.28,<1.7
     - pkg-config
     - fontconfig 2.12.*
-    - freetype 2.7|2.7.*
+    - freetype 2.7
     - expat
     - cairo 1.14.*  # [linux]
-    - zlib 1.2.*
+    - zlib 1.2.8
   run:
     - ncl
     - libgcc
     - python
-    - numpy x.x
+    - numpy >=1.7  # [py27]
     - libpng >=1.6.28,<1.7
     - pkg-config
     - fontconfig 2.12.*
-    - freetype 2.7|2.7.*
+    - freetype 2.7
     - expat
     - cairo 1.14.*  # [linux]
-    - zlib 1.2.*
+    - zlib 1.2.8
 
 test:
   source_files:
