@@ -9,7 +9,7 @@ package:
 source:
   fn: pyngl-{{ version }}.tar.gz
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
-  sha256: 5b13af17d819d210e92d179a73f1323bc0feeeafefe55ded043b74462ebf712d
+  sha256: be530f5692ce4329322c432903d8d37daa39e695c40c10157492e576317b7270
   patches:
     - beta_version.patch
 
@@ -46,13 +46,13 @@ requirements:
 
 test:
   source_files:
-    - src/examples
+    - examples
   requires:
     - nose
   imports:
     - Ngl
   commands:
-    - cd src/examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
+    - cd examples && for file in xy2.py; do echo $file ; nosetests $file ; done | tee pyngl-test.log
 
 about:
   home: http://pyngl.ucar.edu/
