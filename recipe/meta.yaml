@@ -10,35 +10,35 @@ source:
   sha256: 14a5fc172d4eb166a675c190d1349e5ac46cbee32d0efcc2c0446d47bbce094b
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
 requirements:
   build:
-    - ncl
-    - gcc
-    - python
-    - numpy 1.7.*  # [py27]
-    - libpng >=1.6.32,<1.6.35
     - pkg-config
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - expat 2.2.*
-    - cairo 1.14.*  # [linux]
-    - zlib 1.2.11
+    - pkg-config
+    - {{ compiler('c') }}
+  host:
+    - ncl
+    - python
+    - numpy        # [py27]
+    - libpng
+    - fontconfig
+    - freetype
+    - expat
+    - cairo         # [linux]
+    - zlib
   run:
     - ncl
-    - libgcc
     - python
-    - numpy >=1.7  # [py27]
-    - libpng >=1.6.32,<1.6.35
-    - pkg-config
-    - fontconfig 2.12.*
-    - freetype 2.8.1
-    - expat 2.2.*
-    - cairo 1.14.*  # [linux]
-    - zlib 1.2.11
+    - {{ pin_compatible('numpy') }}   # [py27]
+    - libpng
+    - fontconfig
+    - freetype
+    - expat
+    - cairo         # [linux]
+    - zlib
 
 test:
   source_files:
