@@ -10,7 +10,7 @@ source:
   sha256: 14a5fc172d4eb166a675c190d1349e5ac46cbee32d0efcc2c0446d47bbce094b
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
