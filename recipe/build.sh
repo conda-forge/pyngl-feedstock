@@ -12,7 +12,7 @@ if [ "$(uname)" = "Darwin" ]; then
     fi
 fi
      
-export CC=${PREFIX}/bin/gcc
+export CC=gcc
 export CXXFLAGS="-fPIC $CXXFLAGS"
 export LDFLAGS="${x11_lib} -L${PREFIX}/lib $LDFLAGS"
 export CPPFLAGS="${x11_inc} -I${PREFIX}/include $CPPFLAGS"

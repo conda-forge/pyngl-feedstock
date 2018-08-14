@@ -1,0 +1,34 @@
+c_compiler:
+- toolchain_c
+cairo:
+- '1.14'
+expat:
+- '2.2'
+fontconfig:
+- '2.13'
+freetype:
+- 2.8.1
+libpng:
+- 1.6.34
+numpy:
+- '1.9'
+pin_run_as_build:
+  cairo:
+    max_pin: x.x
+  expat:
+    max_pin: x.x
+  fontconfig:
+    max_pin: x
+  freetype:
+    max_pin: x.x
+  libpng:
+    max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+python:
+- '2.7'
+zlib:
+- '1.2'
