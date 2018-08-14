@@ -7,7 +7,7 @@ expat:
 fontconfig:
 - '2.13'
 freetype:
-- 2.8.1
+- 2.9.1
 libpng:
 - 1.6.34
 numpy:
@@ -20,7 +20,7 @@ pin_run_as_build:
   fontconfig:
     max_pin: x
   freetype:
-    max_pin: x.x
+    max_pin: x
   libpng:
     max_pin: x.x
   python:
