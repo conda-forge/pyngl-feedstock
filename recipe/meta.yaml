@@ -17,27 +17,26 @@ build:
 requirements:
   build:
     - pkg-config
-    - pkg-config
     - {{ compiler('c') }}
   host:
     - ncl
     - python
-    - numpy        # [py27]
+    - numpy  # [py27]
     - libpng
     - fontconfig
     - freetype
     - expat
-    - cairo         # [linux]
+    - cairo  # [linux]
     - zlib
   run:
     - ncl
     - python
-    - {{ pin_compatible('numpy') }}   # [py27]
+    - {{ pin_compatible('numpy') }}  # [py27]
     - libpng
     - fontconfig
     - freetype
     - expat
-    - cairo         # [linux]
+    - cairo  # [linux]
     - zlib
 
 test:
