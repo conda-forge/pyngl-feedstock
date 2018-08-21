@@ -1,4 +1,4 @@
-{% set version = "1.5.0" %}
+{% set version = "1.6.0" %}
 
 package:
   name: pyngl
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
-  sha256: 14a5fc172d4eb166a675c190d1349e5ac46cbee32d0efcc2c0446d47bbce094b
+  sha256: 5227a30bfd7575655c3722e0502c6a6c36c9b5b77ec6e6760ee586baa4bfb7ef
 
 build:
-  number: 3
-  skip: True  # [win or py3k]
+  number: 0
+  skip: True  # [win]
   detect_binary_files_with_prefix: true
 
 requirements:
