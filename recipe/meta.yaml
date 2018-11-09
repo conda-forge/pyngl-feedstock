@@ -1,4 +1,4 @@
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: pyngl
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
-  sha256: 5227a30bfd7575655c3722e0502c6a6c36c9b5b77ec6e6760ee586baa4bfb7ef
+  sha256: e590ae68b4e57658c133f6efbfaab53a0893312ea095cf3f231cf78ab640e71e
 
 build:
   number: 0
