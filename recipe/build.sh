@@ -12,7 +12,7 @@ if [ "$(uname)" = "Darwin" ]; then
     fi
 fi
      
-export CC=gcc
+export CC=$GCC
 export CXXFLAGS="-fPIC $CXXFLAGS"
 export LDFLAGS="${x11_lib} -L${PREFIX}/lib $LDFLAGS"
 export CPPFLAGS="${x11_inc} -I${PREFIX}/include $CPPFLAGS"
@@ -23,6 +23,7 @@ export PNG_PREFIX=${PREFIX}
 export NCARG_ROOT=${PREFIX}
 
 if [[ $(uname) == Darwin ]]; then
+  export CC=$CLANG
   export MACOSX_DEPLOYMENT_TARGET="10.9"
   export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
   export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
