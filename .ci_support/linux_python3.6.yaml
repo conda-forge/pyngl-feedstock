@@ -1,5 +1,7 @@
 c_compiler:
 - gcc
+c_compiler_version:
+- '7'
 cairo:
 - '1.16'
 channel_sources:
@@ -15,9 +17,9 @@ fontconfig:
 freetype:
 - 2.9.1
 libpng:
-- 1.6.35
+- '1.6'
 numpy:
-- '1.9'
+- '1.14'
 pin_run_as_build:
   cairo:
     max_pin: x.x
