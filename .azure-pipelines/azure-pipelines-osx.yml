@@ -27,11 +27,7 @@ jobs:
   # TODO: Fast finish on azure pipelines?
   - script: |
       echo "Fast Finish"
-
-  - script: |
-      echo "Install XQuartz"
-      brew cask install xquartz
-    displayName: Install XQuartz
+      
 
   - script: |
       echo "Removing homebrew from Azure to avoid conflicts."
