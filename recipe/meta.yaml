@@ -52,7 +52,9 @@ test:
 
 about:
   home: http://pyngl.ucar.edu/
-  license: 'PyNGL Source Code'
+  # PyNGL now seems to be under Apache-2.0 license,
+  # but it is not clear that this applies to the last release.
+  license: LicenseRef-PyNGL
   summary: 'PyNGL is a scientific data visualization package with an emphasis on high quality 2D visualizations.'
 
 extra:
