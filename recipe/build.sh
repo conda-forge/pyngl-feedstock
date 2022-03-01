@@ -1,6 +1,11 @@
 #!/bin/sh
 
 if [ "$(uname)" = "Darwin" ]; then
+
+    # install xquartz
+    sudo mv /usr/local/conda_mangled/* /usr/local/
+    /usr/local/Homebrew/bin/brew install --cask xquartz
+
     if [ -d "/opt/X11" ]; then
         x11_lib="-L/opt/X11/lib /opt/X11/lib/libX11.6.dylib /opt/X11/lib/libcairo.2.dylib /opt/X11/lib/libfontconfig.1.dylib /opt/X11/lib/libpixman-1.0.dylib /opt/X11/lib/libfreetype.6.dylib /opt/X11/lib/libXrender.1.dylib /opt/X11/lib/libXext.6.dylib"
         x11_inc="-I/opt/X11/include -I/opt/X11/include/freetype2"
