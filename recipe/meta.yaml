@@ -7,6 +7,8 @@ package:
 source:
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
   sha256: e590ae68b4e57658c133f6efbfaab53a0893312ea095cf3f231cf78ab640e71e
+  patches:
+    - 0000-extern-common-pcmp04.patch
 
 build:
   number: 2
