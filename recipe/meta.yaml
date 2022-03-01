@@ -19,6 +19,9 @@ requirements:
   build:
     - pkg-config
     - {{ compiler('c') }}
+    # Add fortran compiler jinja to ensure correct
+    # runtime library dependencies
+    - {{ compiler('fortran') }}
   host:
     - ncl
     - python
