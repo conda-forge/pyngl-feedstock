@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/NCAR/pyngl/archive/{{ version }}.tar.gz
   sha256: e590ae68b4e57658c133f6efbfaab53a0893312ea095cf3f231cf78ab640e71e
+  patches:
+    - 0000-extern-common-pcmp04.patch
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -17,6 +19,9 @@ requirements:
   build:
     - pkg-config
     - {{ compiler('c') }}
+    # Add fortran compiler jinja to ensure correct
+    # runtime library dependencies
+    - {{ compiler('fortran') }}
   host:
     - ncl
     - python
@@ -50,7 +55,9 @@ test:
 
 about:
   home: http://pyngl.ucar.edu/
-  license: 'PyNGL Source Code'
+  # PyNGL now seems to be under Apache-2.0 license,
+  # but it is not clear that this applies to the last release.
+  license: LicenseRef-PyNGL
   summary: 'PyNGL is a scientific data visualization package with an emphasis on high quality 2D visualizations.'
 
 extra:
@@ -58,3 +65,4 @@ extra:
     - khallock
     - marylhaley
     - david-ian-brown
+    - zklaus

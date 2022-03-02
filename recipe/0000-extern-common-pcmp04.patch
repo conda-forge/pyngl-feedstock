@@ -1,0 +1,24 @@
+diff -ruN pyngl-1.6.1.orig/src/hlu/hlu.i pyngl-1.6.1/src/hlu/hlu.i
+--- pyngl-1.6.1.orig/src/hlu/hlu.i	2018-11-10 00:05:34.000000000 +0100
++++ pyngl-1.6.1/src/hlu/hlu.i	2022-03-01 12:46:43.526465354 +0100
+@@ -321,7 +321,7 @@
+     return target;
+ }
+ 
+-struct common1 {
++extern struct common1 {
+   float pang, plat, plon;
+ } NGCALLF(pcmp04,PCMP04);
+ 
+diff -ruN pyngl-1.6.1.orig/src/hlu/hlu_wrap.c pyngl-1.6.1/src/hlu/hlu_wrap.c
+--- pyngl-1.6.1.orig/src/hlu/hlu_wrap.c	2018-11-10 00:05:34.000000000 +0100
++++ pyngl-1.6.1/src/hlu/hlu_wrap.c	2022-03-01 12:47:12.261669157 +0100
+@@ -3345,7 +3345,7 @@
+     return target;
+ }
+ 
+-struct common1 {
++extern struct common1 {
+   float pang, plat, plon;
+ } NGCALLF(pcmp04,PCMP04);
+ 
