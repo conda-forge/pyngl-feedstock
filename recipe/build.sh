@@ -35,4 +35,8 @@ if [[ $(uname) == Darwin ]]; then
   export LDFLAGS="-headerpad_max_install_names $LDFLAGS"
 fi
 
+if [[ "${target_platform}" == "osx-arm64" ]]; then
+    export MACOSX_DEPLOYMENT_TARGET="11.0"
+fi
+
 python setup.py install
