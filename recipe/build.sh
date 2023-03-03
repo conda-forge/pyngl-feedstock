@@ -29,10 +29,10 @@ export PNG_PREFIX=${PREFIX}
 
 if [[ $(uname) == Darwin ]]; then
   export CC=$CLANG
-  export MACOSX_DEPLOYMENT_TARGET="10.9"
   export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
   export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
   export LDFLAGS="-headerpad_max_install_names $LDFLAGS"
 fi
+
 
 python setup.py install
