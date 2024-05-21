@@ -11,7 +11,7 @@ source:
     - 0000-extern-common-pcmp04.patch
 
 build:
-  number: 6
+  number: 7
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -22,6 +22,7 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - pkg-config
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     # Add fortran compiler jinja to ensure correct
     # runtime library dependencies
     - {{ compiler('fortran') }}
@@ -38,7 +39,6 @@ requirements:
   run:
     - ncl
     - python
-    - {{ pin_compatible('numpy') }}
     - libpng
     - fontconfig
     - freetype
